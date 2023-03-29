@@ -1,0 +1,10 @@
+export const GET_DOGS = "GET_DOGS";
+export const GET_TEMPERAMENTS = "GET_TEMPERAMENTS_LIST";
+export const  GET_DOGS_BY_TEMP = " GET_DOGS_BY_TEMP";
+export const GET_DOGS_BY_NAME = "GET_DOGS_BY_NAME";
+export const FILTER_CREATED = "FILTER_CREATED";
+export const ORDER_BY_NAME = "ORDER_BY_NAME";
+export const RESET_DETAIL = "RESET_DETAIL";
+export const GET_DETAILS = "GET_DETAILS";
+export const GET_TEMPERAMENTS_LIST = " GET_TEMPERAMENTS_LIST";
+export const ORDER_BY_WEIGHT = "ORDER_BY_WEIGHT";

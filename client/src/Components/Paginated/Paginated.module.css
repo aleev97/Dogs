@@ -1,0 +1,30 @@
+.container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.paginated{
+    list-style:none;
+    display: flex;
+    gap:0.2rem;
+}
+
+.number {
+    border-radius: 4px;
+    padding: 0.1rem ;
+    cursor: pointer;
+}
+
+.number:hover {
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.buttonNumber{
+    color: rgb(0, 0, 0);
+    border: blue;
+    background-color:rgba(42, 77, 233, 0.808);
+    border-radius: 10px;
+    width: 2rem;
+    height: 1.5rem;
+}

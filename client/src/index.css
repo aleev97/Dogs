@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(C:\Users\vaniv\OneDrive\Escritorio\PI-Dogs-main\PI-Dogs-main\client\public\cachorro-cockapoo-fondo-blanco-1024x768.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -45px;
+  background-attachment: fixed;   /*esta propiedad permite que se haga scroll en eje y y la imagen de fonfo permanece fija */
+}
+ 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
