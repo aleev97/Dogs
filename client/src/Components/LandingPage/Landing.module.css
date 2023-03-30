@@ -74,17 +74,17 @@
   
   @media screen and (max-width: 480px) {
     .title {
-      font-size: 16px;
-      top: 13%;
+      font-size: 16.4px;
+      top: 11%;
     }
     .text {
-      font-size: 16px;
+      font-size: 18px;
       padding: 21px;
       margin-top: 2rem;
     }
     .button {
         bottom: 2%;
-        margin-top: 2rem ;
+        margin-top: 1rem ;
       }
      
   }
