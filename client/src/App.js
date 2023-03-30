@@ -5,8 +5,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import Home from './Components/HomePage/HomePage';
 import Detail from './Components/DetailPage/DetailPage';
 import Form from './Components/FormPage/FormPage';
-import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001' //url base para funcion de las llamadas
+
 
 function App() {
   return (
