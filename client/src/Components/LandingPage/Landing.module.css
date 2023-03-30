@@ -76,7 +76,7 @@
   @media screen and (max-width: 480px) {
     .title {
       font-size: 16.4px;
-      top: 9%;
+      top: 9%; 
     }
     .text {
       font-size: 20px;
