@@ -37,7 +37,6 @@
   }
   
   .button {
-    position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -84,7 +83,7 @@
     }
     .button {
         bottom: 2%;
-        margin-top: 1rem ;
+        margin-top: 3rem ;
       }
      
   }
