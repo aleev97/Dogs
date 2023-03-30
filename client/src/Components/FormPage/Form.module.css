@@ -1,35 +1,45 @@
-.img {
+.container1{
+    background-image: url("https://mobimg.b-cdn.net/v3/fetch/01/01858b95eff49cf86dd88b5cc151ee36.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     z-index: 0;
-    height: 100vh;
-    width: 99.9vw;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
-.button1 {
-    position: absolute;
-    background-color: rgba(0, 0, 255, 0.493);
-    left: 1rem;
-    top: 0rem;
-    width: 7rem;
-    height: 1.5rem;
-    border-radius: 8px;
-}
 
 .contentTitle {
-    position: relative;
     justify-content: center;
     text-align: center;
-    top: -0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button1 {
+    border-radius: 4px;
+    background-color: rgb(67, 99, 187);
+    align-items: center;
+    width: 90px;
+    height: 25px;
+    padding: 2px;
+    border: 2.5px solid rgb(10, 149, 230);
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .title {
-    color: rgb(12, 17, 66);
-    font-family: cursive;
-    font-size: 38px;
+    text-align: center;
+    -webkit-text-stroke: 0.1px #F0EBD8;
+    color: #051e58;
+    font-family:serif;
+    font-size: 52px;
 }
 
 .form {
@@ -41,31 +51,23 @@
     flex-direction: column;
     border-radius: 20px;
     z-index: 0;
-    height: 81vh;
-    width: 70vw;
-    position: absolute;
-    top: 5rem;
-    left: 10rem;
+    height: 90vh;
+    width: 60vw;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
 .container2 {
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    height: 8vh;
-    width: 68vw;
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
 }
 
 .name {
     color: rgb(206, 206, 206);
     font-weight: 660;
-    position: absolute;
-    top: 0.7rem;
-    left: 1rem;
 }
 
 .inputName {
@@ -76,9 +78,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 0.7rem;
-    left: 4.5rem;
+    width: 20rem;
 }
 
 .inputName:focus {
@@ -89,28 +89,20 @@
 }
 
 .errName {
-    position: absolute;
-    top: 0.7rem;
-    left: 16.2rem;
     color: rgb(175, 0, 0);
 }
 
 .container3 {
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    height: 8vh;
-    width: 70vw;
-    position: absolute;
-    top: 3rem;
-    left: 0rem;
 }
 
 .image {
     color: rgb(206, 206, 206);
     font-weight: 660;
-    position: absolute;
-    top: 0.7rem;
-    left: 1rem;
 }
 
 .inputImage {
@@ -121,9 +113,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 0.7rem;
-    left: 4.6rem;
+    width: 20rem;
 }
 
 .inputImage:focus {
@@ -134,36 +124,26 @@
 }
 
 .errImag {
-    position: absolute;
-    top: 0.5rem;
-    left: 16rem;
     color: rgb(175, 0, 0);
 }
 
-.container4 {
-    border-radius: 10px;
+.container4 { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    height: 18vh;
-    width: 70vw;
-    position: absolute;
-    top: 6rem;
-    left: 0rem;
 }
 
 .labelWeight {
     color: rgb(206, 206, 206);
-    font-weight: 800;
-    position: absolute;
-    top: 0.2rem;
-    left: 1rem;
+    font-weight: 660;
 }
 
 .labelWeightmin {
     color: rgb(206, 206, 206);
-    font-weight: 660;
-    position: absolute;
-    top: 2.1rem;
-    left: 2.5rem;
+    font-weight: 600;
+    margin-top: rem;
 }
 
 .inputWeightmin {
@@ -174,9 +154,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 2.1rem;
-    left: 5rem;
+    width: 20rem;
 }
 
 .inputWeightmin:focus {
@@ -187,18 +165,12 @@
 }
 
 .errWeightmin {
-    position: absolute;
-    top: 2.1rem;
-    left: 16.6rem;
     color: rgb(175, 0, 0);
 }
 
 .labelWeightmax {
     color: rgb(206, 206, 206);
-    font-weight: 660;
-    position: absolute;
-    top: 4.2rem;
-    left: 2.5rem;
+    font-weight: 600;
 }
 
 .inputWeightmax {
@@ -209,9 +181,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 4.1rem;
-    left: 5rem;
+    width: 20rem;
 }
 
 .inputWeightmax:focus {
@@ -222,28 +192,20 @@
 }
 
 .errWeightmax {
-    position: absolute;
-    top: 4.1rem;
-    left: 16.5rem;
     color: rgb(175, 0, 0);
 }
 
 .container5 {
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    height: 7vh;
-    width: 70vw;
-    position: absolute;
-    top: 12.5rem;
-    left: 0rem;
 }
 
 .height {
     color: rgb(206, 206, 206);
     font-weight: 660;
-    position: absolute;
-    top: 0.5rem;
-    left: 0.9rem;
 }
 
 .inputHeight {
@@ -254,9 +216,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 0rem;
-    left: 6.6rem;
+    width: 20rem;
 }
 
 .inputHeight:focus {
@@ -268,29 +228,20 @@
 
 
 .errheight {
-    position: absolute;
-    top: 0rem;
-    left: 15rem;
     color: rgb(175, 0, 0);
-    width: 39vw;
 }
 
 .container6 {
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    height: 7vh;
-    width: 70vw;
-    position: absolute;
-    top: 15.2rem;
-    left: 0rem;
 }
 
 .life {
     color: rgb(206, 206, 206);
     font-weight: 660;
-    position: absolute;
-    top: 0.7rem;
-    left: 0.9rem;
 }
 
 .inputLife {
@@ -301,9 +252,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    position: absolute;
-    top: 0rem;
-    left: 17.4rem;
+    width: 20rem;
 }
 
 .inputLife:focus {
@@ -314,71 +263,32 @@
 }
 
 .errLife {
-    position: absolute;
-    top: 0rem;
-    left: 27rem;
     color: rgb(175, 0, 0);
-    width: 27vw;
 }
 
 .temperaments {
-    color: rgb(240, 230, 230);
+    color: rgb(206, 206, 206);
     font-weight: 660;
-    border-radius: 10px;
-    z-index: 0;
-    height: 4vh;
-    width: 12vw;
-    position: absolute;
-    top: 18.5rem;
-    left: 0rem;
 }
 
 .temps {
-    color: rgb(240, 230, 230);
+    color: rgb(206, 206, 206);
     font-weight: 660;
-    background-color: #080707a9;
-    border-radius: 5px;
-    padding: 1px;
-    z-index: 0;
-    height: 4vh;
-    width: 10vw;
-    position: absolute;
-    top: 18.5rem;
-    left: 9.2rem;
 }
 
 .frc {
-    color: rgb(240, 230, 230);
+    color: rgb(206, 206, 206);
     font-weight: 660;
-    border-radius: 10px;
-    z-index: 0;
-    height: 7vh;
-    width: 12vw;
-    position: absolute;
-    top: 20rem;
-    left: 0rem;
 }
 
 .ul {
     color: hwb(244 0% 40%);
     font-weight: 660;
-    border-radius: 10px;
-    z-index: 0;
-    text-align: left;
-    height: 7vh;
-    width: 54vw;
-    position: absolute;
-    top: 20.4rem;
-    left: 8.3rem;
 }
 
 .button2 {
-    z-index: 0;
     height: 6vh;
     width: 13vw;
-    position: absolute;
-    top: 30rem;
-    left: 25rem;
     display: flex;
     align-items: center;
     font-family: inherit;
@@ -420,7 +330,6 @@
     z-index: 0;
     height: 4vh;
     width: 2.5vw;
-    position: absolute;
     top: 26.4rem;
     left: 56rem;
 }

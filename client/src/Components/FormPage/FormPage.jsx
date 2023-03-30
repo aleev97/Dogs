@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTemperamentsList} from "../../Redux/actions"
 import styles from "./Form.module.css"
 import Validation from "./Validation"
-import image from './PerrosparaForm.webp';
 import axios from "axios";
 
 
@@ -46,13 +45,6 @@ const Form = () => {
         })
     }
 
-    // const handleDelete = (temp) => {
-    //     setInputs({
-    //         ...inputs,
-    //         temperaments: inputs.temperaments.filter(inst => inst !== temp)
-    //     })
-    // }
-
     const handleSubmit = async (event) => {
         event.preventDefault();
           await axios.post('/dogs', {
@@ -81,7 +73,6 @@ const Form = () => {
 
     return (
         <div className={styles.container1} >
-            <img className={styles.img} src={image} alt="" />
             <div className={styles.contentTitle} >
             <button className={styles.button1} onClick={backToHome} > Back to Home</button>
                 <h1 className={styles.title} >Complete the Dog's Form 🐶 </h1>
@@ -106,7 +97,7 @@ const Form = () => {
                         type="text"
                         name="image"
                         value={inputs.image}
-                        placeholder={"Add an image"}
+                        placeholder={"Add an image (link)"}
                         onChange={(event) => handleInputs(event)} />
                     {error.image && <strong className={styles.errImag} >{error.image}</strong>}
                 </div>
@@ -158,12 +149,13 @@ const Form = () => {
                 <br />
 
                 <div className={styles.container6} >
-                    <label className={styles.life} >Life expectancy (example: 10 - 15") :
+                    <label className={styles.life} >Life expectancy:
                         <input
                             className={styles.inputLife}
                             type="text"
                             name="life_span"
                             value={inputs.life_span}
+                            placeholder={"For example: 10 - 15"}
                             onChange={(event) => handleInputs(event)} />
                         {error.life_span && <strong className={styles.errLife} >{error.life_span}</strong>}
                     </label>

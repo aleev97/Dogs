@@ -1,10 +1,5 @@
 .container {
   z-index: 0;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .card__container {
@@ -15,9 +10,21 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 0 auto;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.container__filter{
+  margin-inline: 6.1rem;
+  align-items: center;
+  justify-content: space-between;
+display: flex;
+}
+
+.filters{
+ display: flex;
+ gap: 1.5rem; 
 }
 
 .title {
@@ -25,14 +32,17 @@
   margin-top: 4rem;
   -webkit-text-stroke: 0.1px #F0EBD8;
   color: #051e58;
-  font-family: cursive;
+  font-family:serif;
   font-size: 52px;
 }
 
-.navbar {
+.navbar{
+  display: flex;
+  gap: 1.5rem; 
+}
+
+.input {
   align-items: center;
-  margin-left: 170px;
-  margin-top: 0rem;
   width: 165px;
   height: 5px;
   padding: 8px;
@@ -44,33 +54,54 @@
   border-radius: 4px;
 }
 
-.navbar:focus {
+.input:focus {
   outline: none;
   border: 0.6px solid rgb(22, 21, 21);
   box-shadow: -5px -5px 1px rgb(17, 17, 17);
 }
 
-.navbar:hover {
+.input:hover {
   animation: anim 1s linear infinite;
 }
 
-
 .button__Search {
+  margin: 0 auto;
   color: rgb(209, 187, 187);
   background-color: rgb(0, 0, 0);
   border-radius: 6px;
   width: 80px;
   height: 24px;
-  margin-left: -275px;
-  margin-top: 0rem;
+}
+
+.from__form{
+  border-radius: 4px;
+  background-color: rgb(67, 99, 187);
+  align-items: center;
+  width: 90px;
+  height: 25px;
+  padding: 2px;
+  border: 2.5px solid rgb(10, 149, 230);
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .order {
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
-  position: absolute;
-  margin-left: 623px;
-  margin-top: -3.5rem;
+  align-items: center;
+  width: 90px;
+  height: 25px;
+  padding: 2px;
+  border: 2.5px solid rgb(184, 83, 0);
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.weight{
+  border-radius: 4px;
+  background-color: rgb(233, 166, 79);
   align-items: center;
   width: 90px;
   height: 25px;
@@ -84,9 +115,6 @@
 .Ordertemperaments {
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
-  position: absolute;
-  margin-left: 725px;
-  margin-top: -3.5rem;
   align-items: center;
   width: 140px;
   height: 25px;
@@ -100,48 +128,25 @@
 .orderInfo {
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
-  position: absolute;
-  margin-left: 878px;
-  margin-top: -3.5rem;
   align-items: center;
   width: 80px;
   height: 25px;
   padding: 2px;
   border: 2.5px solid rgb(184, 83, 0);
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
-.weight {
-  border-radius: 4px;
-  background-color: rgb(233, 166, 79);
-  position: absolute;
-  margin-left: 970px;
-  margin-top: -3.5rem;
-  align-items: center;
-  width: 98px;
-  height: 25px;
-  padding: 2px;
-  border: 2.5px solid rgb(184, 83, 0);
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 
-.from__form {
-  color: antiquewhite;
-  border-radius: 6px;
-  background-color: rgb(0, 75, 126);
-  position: absolute;
-  margin-left: 1100px;
-  margin-top: -4rem;
-  align-items: center;
-  width: 80px;
-  height: 36px;
-  padding: 2px;
-  border: 2.5px solid rgb(0, 147, 184);
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+  /* media queries */
+  @media screen and (max-width: 830px) {
+    .container__filter{
+flex-direction: column;
+    }
+    .filters{
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    .title {
+      text-align: center;
+      font-size: 30px;
+    }
+  }

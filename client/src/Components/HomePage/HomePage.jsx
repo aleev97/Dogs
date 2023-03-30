@@ -39,7 +39,7 @@ export default function Home() {
         dispatch(getTemperamentsList()) //despacho los temperaments que traigo de la api
     }, [dispatch])
 
-    
+
     function form() {
         navigate("/form");
     }
@@ -87,62 +87,64 @@ export default function Home() {
     return (
         <div className={Styles.container}>
             <h1 className={Styles.title} >Welcome to the home the Dog App 🐾🐾 </h1>
-            
-            <div>
-                <input className={Styles.navbar} type="text" placeholder="Search a dog..." value={dogState} onChange={(event) => setDogsState(event.target.value)} />
-                <button className={Styles.button__Search} type="submit" onClick={handleClick}>
-                    <span>search 🔎</span>
-                </button>
-            </div>
 
-            <div>
-             <button className={Styles.from__form} onClick={form} >Go to form</button>
-                <select className={Styles.order} onChange={(event) => handleOrder(event)}>
-                    <option value="asc">ascending</option>
-                    <option value="des">descending</option>
-                </select>
-
-                <select className={Styles.weight} onChange={(event) => handleOrderByWeight(event)} >
-                    <option value="all">all</option>
-                    <option value="max">max weight</option>
-                    <option value="min">min weight</option>
-                </select>
-
-                <select className={Styles.Ordertemperaments} onChange={(event) => handleFilteredByTemp(event)}>
-                    <option value="all">All Temperaments</option>
-                    {temperaments.map((temp) => {
-                        return (
-                            <option value={temp} key={temp}>
-                                {temp}
-                            </option>
-                        );
-                    })}
-
-                </select>
-
-                <select className={Styles.orderInfo} onChange={(event) => handleFilteredByMade(event)} >
-                    <option value="all">All </option>
-                    <option value="created">Created </option>
-                    <option value="api">Existing</option>
-                </select>
-                <div className={Styles.card__container} >
-                    {currentDogs?.map((dog) => { //tomo los perros que me devuelve el paginado
-                        console.log(dog)
-                        return (
-
-                            <Card
-                                weight={dog.weight}
-                                temperament={dog.temperament}
-                                name={dog.name}
-                                key={dog.id}
-                                image={dog.image}
-                                id={dog.id}
-                            />
-                        );
-
-                    })}
-                    <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
+            <div className={Styles.container__filter} >
+                <div className={Styles.navbar} >
+                    <input className={Styles.input} type="text" placeholder="Search a dog..." value={dogState} onChange={(event) => setDogsState(event.target.value)} />
+                    <button className={Styles.button__Search} type="submit" onClick={handleClick}>
+                        <span>search 🔎</span>
+                    </button>
                 </div>
+
+                <div className={Styles.filters} >
+                    <button className={Styles.from__form} onClick={form} >Go to form</button>
+                    <select className={Styles.order} onChange={(event) => handleOrder(event)}>
+                        <option value="asc">ascending</option>
+                        <option value="des">descending</option>
+                    </select>
+
+                    <select className={Styles.weight} onChange={(event) => handleOrderByWeight(event)} >
+                        <option value="all">all</option>
+                        <option value="max">max weight</option>
+                        <option value="min">min weight</option>
+                    </select>
+
+                    <select className={Styles.Ordertemperaments} onChange={(event) => handleFilteredByTemp(event)}>
+                        <option value="all">All Temperaments</option>
+                        {temperaments.map((temp) => {
+                            return (
+                                <option value={temp} key={temp}>
+                                    {temp}
+                                </option>
+                            );
+                        })} 
+
+                    </select>
+
+                    <select className={Styles.orderInfo} onChange={(event) => handleFilteredByMade(event)} >
+                        <option value="all">All </option>
+                        <option value="created">Created </option>
+                        <option value="api">Existing</option>
+                    </select>
+                </div>
+            </div>
+            <div className={Styles.card__container} >
+                {currentDogs?.map((dog) => { //tomo los perros que me devuelve el paginado
+                    console.log(dog)
+                    return (
+
+                        <Card
+                            weight={dog.weight}
+                            temperament={dog.temperament}
+                            name={dog.name}
+                            key={dog.id}
+                            image={dog.image}
+                            id={dog.id}
+                        />
+                    );
+
+                })}
+                <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
             </div>
         </div>
 
