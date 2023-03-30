@@ -35,6 +35,10 @@
   }
   
   .button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 18px;
     background-color: #748CAB;
     font-size: 14px;
@@ -43,7 +47,7 @@
     box-shadow: 2px 2px 4px #0D1321;
     color: #F0EBD8;
     border-radius: 6px;
-    margin-top: 20px;
+    margin-bottom: 2rem;
   }
   
   button:hover {
@@ -66,7 +70,7 @@
       margin-top: 2rem;
     }
     .button {
-      margin-top: 20px;
+      bottom: 5%;
     }
   }
   
@@ -80,5 +84,8 @@
       padding: 20px;
       margin-top: 2rem;
     }
+    .button {
+        bottom: 2%;
+      }
   }
   
