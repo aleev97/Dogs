@@ -74,18 +74,17 @@
   
   @media screen and (max-width: 480px) {
     .title {
-      background-color: rgba(128, 128, 128, 0.356);
-      font-size: 20px;
+      font-size: 18px;
       top: 15%;
     }
     .text {
       font-size: 14px;
-      padding: 20px;
+      padding: 21px;
       margin-top: 2rem;
     }
     .button {
         bottom: 2%;
-        margin-top: 4rem ;
+        margin-top: 3rem ;
       }
      
   }
