@@ -26,6 +26,6 @@ const { PORT } = process.env
 conn.sync({ force: true }).then(() => {
   server.listen(PORT, async () => {
  await getAllTemperaments();
-    console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
+    console.log('%s listening at', PORT); // eslint-disable-line no-console
   });
 });
