@@ -13,6 +13,8 @@
   }
   
   .title {
+    background-color: rgba(128, 128, 128, 0.521);
+    border-radius: 6px;
     z-index: 1;
     -webkit-text-stroke: 0.1px #F0EBD8;
     position: absolute;
@@ -72,7 +74,7 @@
   
   @media screen and (max-width: 480px) {
     .title {
-      font-size: 23px;
+      font-size: 22px;
       top: 15%;
     }
     .text {
