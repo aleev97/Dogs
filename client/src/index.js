@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 // axios.defaults.baseURL = 'http://localhost:3001' //url base para funcion de las llamadas
-
+ 
 axios.defaults.baseURL = 'https://dogs-production-f058.up.railway.app' //url base para funcion de las llamadas
 ReactDOM.render(
   <Provider store={store}>
