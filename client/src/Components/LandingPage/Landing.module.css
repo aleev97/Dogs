@@ -1,6 +1,6 @@
 
-.container { 
-    background-image: url("https://static8.depositphotos.com/1009420/885/i/600/depositphotos_8853147-stock-photo-group-of-five-dogs.jpg");
+.container {
+    background-image: url("https://images.unsplash.com/photo-1555325084-b068599743c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVycm8lMjBmb25kbyUyMGJsYW5jb3xlbnwwfHwwfHw%3D&w=1000&q=80");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,20 +9,19 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    filter: brightness(80%) contrast(120%);
   }
   
   .title {
     z-index: 1;
     -webkit-text-stroke: 0.1px #F0EBD8;
-    position:absolute; 
-    margin-left: -28rem;
-    margin-top: -26rem;
-    margin-bottom: 0rem;
+    position: relative;
+    margin: 0;
+    text-align: center;
     color: #0D1321;
-    font-family:cursive;
+    font-family: cursive;
     font-size: 52px;
   }
   
@@ -30,17 +29,15 @@
     z-index: 0;
     -webkit-text-stroke: 0.1px #F0EBD8;
     color: #0D1321;
-    font-size:25px;
+    font-size: 25px;
     padding: 50px;
-    font-family:cursive;
-    margin-left: 42rem;
-    margin-top:6rem;
+    font-family: cursive;
+    margin: 0;
+    text-align: center;
   }
   
   .button {
-    position:absolute; 
-    margin-left: 40rem;
-    margin-top: 28rem;
+    position: relative;
     border-radius: 18px;
     background-color: #748CAB;
     font-size: 14px;
@@ -50,8 +47,9 @@
     background: #748CAB;
     color: #F0EBD8;
     border-radius: 6px;
+    margin-top: 2em;
   }
-    
+  
   button:hover {
     background: linear-gradient(90deg, #3E5C76 0%, #3E5C76 100%);
   }
@@ -64,34 +62,28 @@
   @media screen and (max-width: 768px) {
     .title {
       font-size: 30px;
-      margin-left: -12rem;
-      margin-top: -12rem;
+      margin: -6rem 0 0 -12rem;
     }
     .text {
       font-size: 18px;
-      margin-left: 3rem;
-      margin-top: 10rem;
+      margin: 10rem 0 0 0;
     }
     .button {
-      margin-left: 3rem;
-      margin-top: 20rem;
+      margin-top: 8rem;
     }
   }
-    
+  
   @media screen and (max-width: 480px) {
     .title {
       font-size: 24px;
-      margin-left: -10rem;
-      margin-top: -10rem;
+      margin: -5rem 0 0 -10rem;
     }
     .text {
       font-size: 14px;
-      margin-left: 2rem;
-      margin-top: 8rem;
+      margin: 8rem 0 0 0;
     }
     .button {
-      margin-left: 2rem;
-      margin-top: 16rem;
+      margin-top: 6rem;
     }
   }
   
