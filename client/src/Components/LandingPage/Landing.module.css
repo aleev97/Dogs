@@ -80,7 +80,7 @@
       margin-top: 20rem;
     }
   }
-  
+    
   @media screen and (max-width: 480px) {
     .title {
       font-size: 24px;

@@ -8,7 +8,7 @@ export default function LandingPage() {
 
   function backToHome() {
     navigate('/home');
-  }
+  }  
 
   return (
     <>
