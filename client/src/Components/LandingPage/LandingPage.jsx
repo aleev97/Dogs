@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from './Landing.module.css';
-import image from './images/ParaPIdogs.webp';
 import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
@@ -14,7 +13,6 @@ export default function LandingPage() {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <div className={Styles.container}>
-        <img className={Styles.img} src={image} alt="" />
         <h1 className={Styles.title}>Welcome to the dogs app</h1>
         <button onClick={backToHome} className={Styles.button}>
           Enter Home
