@@ -54,10 +54,6 @@
     background: linear-gradient(90deg, #3E5C76 0%, #3E5C76 100%);
   }
   
-  button:active {
-    transform: translateY(2px);
-  }
-  
   /* media queries */
   @media screen and (max-width: 768px) {
     .title {
