@@ -68,22 +68,25 @@
     }
     .button {
       bottom: 5%;
+      margin-top: 6rem ;
+      margin-left: 2rem;
     }
   }
   
   @media screen and (max-width: 480px) {
     .title {
       font-size: 16.4px;
-      top: 11%;
+      top: 9%;
     }
     .text {
-      font-size: 18px;
+      font-size: 20px;
       padding: 21px;
       margin-top: 2rem;
     }
     .button {
         bottom: 2%;
-        margin-top: 3rem ;
+        margin-top: 6rem ;
+        margin-left: 2rem;
       }
      
   }
