@@ -78,6 +78,7 @@ const Form = () => {
                 <h1 className={styles.title} >Complete the Dog's Form 🐶 </h1>
             </div>
             <form  onSubmit={handleSubmit} className={styles.form} >
+               
                 <div className={styles.container2} >
                     <label className={styles.name} >Name: </label>
                     <input
@@ -103,7 +104,7 @@ const Form = () => {
                 </div>
 
                 <div className={styles.container4} >
-                    <label className={styles.labelWeight} >Weight:</label>
+                    <label className={styles.labelWeight} >Weight</label>
                     <br />
                     <br />
                     <label className={styles.labelWeightmin} >Min: </label>
@@ -134,22 +135,22 @@ const Form = () => {
                 <br />
 
                 <div className={styles.container5} >
-                    <label className={styles.height} >Height (cm) :
+                    <label className={styles.height} >Height:</label>
                         <input
                             className={styles.inputHeight}
                             type="text"
                             name="height"
                             value={inputs.height}
-                            placeholder={"For example: 55 - 67"}
+                            placeholder={"For example: 55 - 67 (cm)"}
                             onChange={(event) => handleInputs(event)} />
                         {error.height && <strong className={styles.errheight} >{error.height}</strong>}
-                    </label>
+
                 </div>
 
                 <br />
 
                 <div className={styles.container6} >
-                    <label className={styles.life} >Life expectancy:
+                    <label className={styles.life} >Life expectancy:</label>
                         <input
                             className={styles.inputLife}
                             type="text"
@@ -158,7 +159,6 @@ const Form = () => {
                             placeholder={"For example: 10 - 15"}
                             onChange={(event) => handleInputs(event)} />
                         {error.life_span && <strong className={styles.errLife} >{error.life_span}</strong>}
-                    </label>
                 </div>
 
                 <br />

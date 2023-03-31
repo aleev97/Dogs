@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     z-index: 0;
-    height: 120vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,29 +13,27 @@
 
 
 .contentTitle {
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-left: -18rem;
+    gap: 15rem;
     align-items: center;
+    justify-content: space-between;
+    display: flex;
 }
 .button1 {
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: rgb(67, 99, 187);
     align-items: center;
-    width: 90px;
-    height: 25px;
-    padding: 2px;
-    border: 2.5px solid rgb(10, 149, 230);
-    font-size: 10px;
+    width: 100px;
+    height: 40px;
+    border: 2.5px solid rgb(0, 46, 73);
+    font-size: 11.8px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform:uppercase;
 }
 
 .title {
     text-align: center;
+    margin-top: 1rem;
     -webkit-text-stroke: 0.1px #F0EBD8;
     color: #051e58;
     font-family:serif;
@@ -50,14 +48,17 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    z-index: 0;
-    height: 90vh;
-    width: 60vw;
+    width: 80vw;
     justify-content: center;
     align-items: center;
+    max-width:500px;
+    padding: 50px;
+    margin-top: 1rem;
 }
 
 .container2 {
+    margin-top: 0.8rem;
+    gap:0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +67,7 @@
 }
 
 .name {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
@@ -78,7 +79,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputName:focus {
@@ -89,10 +90,13 @@
 }
 
 .errName {
+    margin-top: 0.1rem;
     color: rgb(175, 0, 0);
 }
 
 .container3 {
+    margin-top: 0.4rem;
+    gap:0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +105,7 @@
 }
 
 .image {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
@@ -113,7 +117,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputImage:focus {
@@ -124,10 +128,12 @@
 }
 
 .errImag {
+    margin-top: 0.1rem;
     color: rgb(175, 0, 0);
 }
 
 .container4 { 
+    margin-top:0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,14 +142,15 @@
 }
 
 .labelWeight {
-    color: rgb(206, 206, 206);
-    font-weight: 660;
+    text-decoration: underline;
+    color: #07308f;
+    font-weight: 800;
 }
 
 .labelWeightmin {
-    color: rgb(206, 206, 206);
-    font-weight: 600;
-    margin-top: rem;
+    color: #051e58;
+    font-weight: 660;
+    margin-top: -1.8rem;
 }
 
 .inputWeightmin {
@@ -154,7 +161,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputWeightmin:focus {
@@ -165,12 +172,14 @@
 }
 
 .errWeightmin {
+    margin-top: 0.1rem;
     color: rgb(175, 0, 0);
 }
 
 .labelWeightmax {
-    color: rgb(206, 206, 206);
-    font-weight: 600;
+    color: #051e58;
+    font-weight: 660;
+    margin-top: -0.8rem;
 }
 
 .inputWeightmax {
@@ -181,7 +190,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputWeightmax:focus {
@@ -192,10 +201,12 @@
 }
 
 .errWeightmax {
+    margin-top: 0.1rem;
     color: rgb(175, 0, 0);
 }
 
 .container5 {
+    gap:0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,7 +215,7 @@
 }
 
 .height {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
@@ -216,7 +227,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputHeight:focus {
@@ -232,6 +243,7 @@
 }
 
 .container6 {
+    gap:0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,7 +252,7 @@
 }
 
 .life {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
@@ -252,7 +264,7 @@
     background-color: #080707a9;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 300ms ease-in-out;
-    width: 20rem;
+    width: 16rem;
 }
 
 .inputLife:focus {
@@ -267,17 +279,17 @@
 }
 
 .temperaments {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
 .temps {
-    color: rgb(206, 206, 206);
-    font-weight: 660;
+    color: #051e58;
+    font-weight: 660;;
 }
 
 .frc {
-    color: rgb(206, 206, 206);
+    color: #051e58;
     font-weight: 660;
 }
 
@@ -287,32 +299,19 @@
 }
 
 .button2 {
-    height: 6vh;
-    width: 13vw;
+    height: 5.5vh;
+    width: 10vw;
     display: flex;
     align-items: center;
     font-family: inherit;
     font-size: 16px;
     padding: 0.7em 1.4em 0.7em 1.1em;
     color: white;
-    background: #ad5389;
-    background: linear-gradient(0deg, rgb(0, 13, 85) 0%, rgb(23, 31, 148) 100%);
+    background: linear-gradient(0deg, rgb(2, 9, 49) 0%, rgb(23, 31, 148) 100%);
     border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em #15015c98;
+    box-shadow: 0 0.7em 1.5em -0.5em #24039998;
     letter-spacing: 0.05em;
     border-radius: 6em;
-}
-
-.button2 svg {
-    margin-right: 6px;
-}
-
-.button2:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em hwb(244 0% 40% / 0.596);
-}
-
-.button2:active {
-    box-shadow: 0 0.3em 1em -0.5em #290ab398;
 }
 
 .tempers {
@@ -323,13 +322,60 @@
     min-width: 20rem;
 }
 
-.button3 {
-    color: rgb(0, 0, 0);
-    background-color: red;
-    border-radius: 6px;
-    z-index: 0;
-    height: 4vh;
-    width: 2.5vw;
-    top: 26.4rem;
-    left: 56rem;
-}
+@media screen and (max-width: 830px) {  
+    .contentTitle {
+        gap: 1rem;
+        margin-left: 0%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+        font-size: 30px;
+      }
+      .form{
+        flex-direction: column;
+        width: 50%;
+      }
+    .inputName{
+        width: 14rem;
+    }
+    .inputImage{
+        width: 14rem;
+    }  
+    .inputWeightmin{
+        width: 14rem;
+    }
+    .inputWeightmax{
+        width: 14rem;
+    }
+    .inputHeight{
+        width: 14rem;
+    }
+    .inputLife{
+        width: 14rem;
+    }
+    .errName{
+        font-size: 12.5px;
+    }
+    .errImag{
+        font-size: 12.5px;
+    }
+    .errWeightmin{
+        font-size: 12.5px;
+    }
+    .errWeightmax{
+        font-size: 12.5px;
+    }
+    .errheight{
+        font-size: 12.5px;
+    }
+    .errLife{
+        font-size: 12.5px;
+    }
+    .button2{
+        margin-bottom: 0.5rem;
+        width: 9rem;
+    }
+  }

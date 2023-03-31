@@ -12,38 +12,35 @@
   }
   
   .title {
+    margin-top: 1rem;
+    background-color: rgba(128, 128, 128, 0.308);
+    border-radius: 8px;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.356);
-    border-radius: 6px;
-    z-index: 1;
-    -webkit-text-stroke: 0.1px #F0EBD8;
-    color: #0D1321;
-    font-family:serif;
+    color: black;
+    font-family: serif;
     font-size: 52px;
   }
   
   .text {
     z-index: 0;
-    -webkit-text-stroke: 0.1px #F0EBD8;
-    color: #0D1321;
-    font-size: 25px;
+    color:black;
+    font-size: 34px;
     padding: 100px;
     font-family: cursive;
     text-align: center;
   }
   
   .button {
-    bottom: 10%;
-    border-radius: 18px;
-    background-color: #748CAB;
-    font-size: 14px;
-    padding: 0.5em 1.5em;
-    border: none;
-    box-shadow: 2px 2px 4px #0D1321;
-    color: #F0EBD8;
+    margin-top: 10rem;
     border-radius: 6px;
-    margin-bottom: 2rem;
-    margin: 0 auto;
+    background-color: rgb(67, 99, 187);
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 2.5px solid rgb(0, 46, 73);
+    font-size: 11.8px;
+    font-weight: bold;
+    text-transform:uppercase;
   }
   
   button:hover {
@@ -53,14 +50,15 @@
   /* media queries */
   @media screen and (max-width: 768px) {
     .title {
+      margin-top: 2rem;
       font-size: 30px;
     }
     .text {
-      font-size: 18px;
-      padding: 20px;
+      font-size: 20px;
+      padding: 0px;
     }
     .button { 
-      bottom: 5%;
+      margin-top: 20rem;
     } 
   }
   

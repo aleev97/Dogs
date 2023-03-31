@@ -117,7 +117,7 @@ export default function Home() {
                                     {temp}
                                 </option>
                             );
-                        })} 
+                        })}
 
                     </select>
 
@@ -144,7 +144,9 @@ export default function Home() {
                     );
 
                 })}
-                <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
+                <div className={Styles.paginated} >
+                    <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
+                </div>
             </div>
         </div>
 

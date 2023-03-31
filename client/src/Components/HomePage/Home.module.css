@@ -1,5 +1,5 @@
 .container {
-  z-index: 0;
+    z-index: 0;
 }
 
 .card__container {
@@ -15,16 +15,16 @@
   gap: 20px;
 }
 
-.container__filter{
+.container__filter {
   margin-inline: 6.1rem;
   align-items: center;
   justify-content: space-between;
-display: flex;
+  display: flex;
 }
 
-.filters{
- display: flex;
- gap: 1.5rem; 
+.filters {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .title {
@@ -32,13 +32,13 @@ display: flex;
   margin-top: 4rem;
   -webkit-text-stroke: 0.1px #F0EBD8;
   color: #051e58;
-  font-family:serif;
+  font-family: serif;
   font-size: 52px;
 }
 
-.navbar{
+.navbar {
   display: flex;
-  gap: 1.5rem; 
+  gap: 1.5rem;
 }
 
 .input {
@@ -73,17 +73,16 @@ display: flex;
   height: 24px;
 }
 
-.from__form{
-  border-radius: 4px;
+.from__form {
+  border-radius: 6px;
   background-color: rgb(67, 99, 187);
   align-items: center;
-  width: 90px;
-  height: 25px;
-  padding: 2px;
-  border: 2.5px solid rgb(10, 149, 230);
-  font-size: 10px;
+  width: 100px;
+  height: 28px;
+  border: 2.5px solid rgb(0, 46, 73);
+  font-size: 11.8px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform:uppercase;
 }
 
 .order {
@@ -99,7 +98,7 @@ display: flex;
   text-transform: uppercase;
 }
 
-.weight{
+.weight {
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
   align-items: center;
@@ -135,18 +134,21 @@ display: flex;
   border: 2.5px solid rgb(184, 83, 0);
 }
 
-
-  /* media queries */
-  @media screen and (max-width: 830px) {
-    .container__filter{
-flex-direction: column;
-    }
-    .filters{
-      flex-direction: column;
-      margin-top: 1rem;
-    }
-    .title {
-      text-align: center;
-      font-size: 30px;
-    }
+/* media queries */
+@media screen and (max-width: 830px) {
+  .container{
   }
+  .container__filter {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 30px;
+  }
+}
