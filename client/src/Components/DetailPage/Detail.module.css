@@ -7,7 +7,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -21,7 +21,7 @@
     border: 2.5px solid rgb(0, 46, 73);
     font-size: 11.8px;
     font-weight: bold;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 .container2 {
@@ -33,7 +33,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.623);
+    background: rgba(80, 79, 79, 0.623);
     border: 2px solid rgba(252, 252, 252, 0.384);
     box-shadow: inset 28px 28px 40px rgba(0, 0, 0, 0.623);
 }
@@ -81,7 +81,7 @@
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    
+
 }
 
 .img {
@@ -108,31 +108,31 @@
 }
 
 .name {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .life__span {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .weight {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .height {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .temps {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 20px;
     font-weight: 700;
@@ -145,86 +145,99 @@
     background-color: #0061bb44;
     margin-left: 30rem;
     margin-top: 20rem;
-  }
-  
-  .load div {
+}
+
+.load div {
     height: 100%;
     width: 100%;
     border-radius: 8px;
     background-color: #004b92;
     animation: width7435 5s linear infinite;
     transition: all;
-  }
-  
-  @keyframes width7435 {
-    from {
-      /*width: 0;*/
-      transform: scaleX(0);
-    }
-  
-    to {
-      transform: scaleX(1);
-    }
-  }
+}
 
-  /* media queries */
+@keyframes width7435 {
+    from {
+        /*width: 0;*/
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* media queries */
 @media screen and (max-width: 830px) {
 
-.container{
-    background-position:top; 
-    justify-content: center;
-   align-items: center; 
-    flex-direction: column; 
-   background-size:800px 800px;
-}
-    .container2{
-    flex-direction: column;
-}
-.dogdetail{
-    flex-direction: column;
-}
-.img{
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1.2rem;
-    border-radius: 1rem;
-    height: 8rem;
-    width: 12rem;
-}
-.dogdetail{
-    flex-direction: column;
-    margin-top: 1rem;
-}
-.name{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16.5px;
-}
-.life__span{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16.5px;
-}
-.weight{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16.5px;
-}
-.height{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16.5px;
-}
-.temps{
-    margin-bottom: 0.4rem;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16.5px;
-}
+    .container {
+        background-position: top;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-size: 800px 800px;
+    }
 
-  }
+    .container2 {
+        flex-direction: column;
+    }
+
+    .button{
+        margin-bottom: 1.4rem;
+    }
+
+    .dogdetail {
+        flex-direction: column;
+    }
+
+    .img {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.2rem;
+        border-radius: 1rem;
+        height: 8rem;
+        width: 12rem;
+    }
+
+    .dogdetail {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .name {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 16.5px;
+    }
+
+    .life__span {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 16.5px;
+    }
+
+    .weight {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 16.5px;
+    }
+
+    .height {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 16.5px;
+    }
+
+    .temps {
+        margin-bottom: 0.4rem;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 16.5px;
+    }
+
+}
