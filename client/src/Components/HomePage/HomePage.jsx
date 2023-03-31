@@ -143,9 +143,11 @@ export default function Home() {
                         />
                     );
 
-                })}
+                })} 
                 <div className={Styles.paginated} >
+                <div>
                     <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
+                    </div>
                 </div>
             </div>
         </div>

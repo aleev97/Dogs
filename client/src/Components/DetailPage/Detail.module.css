@@ -1,4 +1,8 @@
 .container {
+    background-image: url(https://misanimales.com/wp-content/uploads/2021/07/cachorro-cockapoo-fondo-blanco-1024x768.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    background-attachment: fixed;
     z-index: 0;
     height: 100vh;
     display: flex;
@@ -165,7 +169,15 @@
 
   /* media queries */
 @media screen and (max-width: 830px) {
-.container2{
+
+.container{
+    background-position:top; 
+    justify-content: center;
+   align-items: center; 
+    flex-direction: column; 
+   background-size:800px 800px;
+}
+    .container2{
     flex-direction: column;
 }
 .dogdetail{
@@ -176,7 +188,8 @@
     align-items: center;
     margin-top: 1.2rem;
     border-radius: 1rem;
-    height: 4.8rem;
+    height: 8rem;
+    width: 12rem;
 }
 .dogdetail{
     flex-direction: column;

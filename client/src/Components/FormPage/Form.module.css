@@ -1,7 +1,7 @@
 .container1{
     background-image: url("https://mobimg.b-cdn.net/v3/fetch/01/01858b95eff49cf86dd88b5cc151ee36.jpeg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     z-index: 0;
     height: 150vh;
@@ -323,6 +323,15 @@
 }
 
 @media screen and (max-width: 830px) {  
+    .container1{
+        background-position: center;
+        z-index: 0;
+        height: 150vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-size:520px 1200px;
+    }
     .contentTitle {
         gap: 1rem;
         margin-left: 0%;

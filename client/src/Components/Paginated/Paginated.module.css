@@ -1,12 +1,12 @@
 .container{
-    margin-top: 4rem;
+    margin-top: 4.5rem;
     display: flex;
     justify-content: center;
 }
 .paginated{
     list-style:none;
     display: flex;
-    gap:0.1rem;
+    gap:0.35rem;
 }
 
 .number {
