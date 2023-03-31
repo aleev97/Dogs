@@ -53,7 +53,7 @@
 }
 
 .name {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(0, 0, 0);
     text-align:center;
     margin-top: auto;
@@ -62,7 +62,7 @@
 }
 
 .temps {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(58, 5, 5);
     font-size: 14px;
     display: flex;
@@ -74,7 +74,7 @@
 }
 
 .weight {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(58, 5, 5);
     text-align: center;
     margin-top: -1rem;

@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-position-y: -45px;
   background-attachment: fixed;   /*esta propiedad permite que se haga scroll en eje y y la imagen de fonfo permanece fija */
+  object-fit: cover;
 }
  
 code {

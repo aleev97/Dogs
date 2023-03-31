@@ -1,49 +1,49 @@
 .container {
     z-index: 0;
-    height: 104vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .button {
-    border-radius: 4px;
+    margin-top: 2rem;
+    border-radius: 6px;
     background-color: rgb(67, 99, 187);
     align-items: center;
-    width: 90px;
-    height: 25px;
-    padding: 2px;
-    border: 2.5px solid rgb(10, 149, 230);
-    font-size: 10px;
+    width: 110px;
+    height: 40px;
+    border: 2.5px solid rgb(0, 46, 73);
+    font-size: 11.8px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform:uppercase;
 }
 
 .container2 {
-    border-radius: 20PX;
-    margin-top: 8rem;
-    ;
-    margin-left: 8rem;
+    border-radius: 50PX;
+    margin-bottom: 4rem;
     height: 70vh;
     width: 78vw;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
-    background: rgba(17, 4, 73, 0.61);
-    border: 2px solid rgba(83, 7, 7, 0.384);
+    background: rgba(0, 0, 0, 0.623);
+    border: 2px solid rgba(252, 252, 252, 0.384);
+    box-shadow: inset 28px 28px 40px rgba(0, 0, 0, 0.623);
 }
 
 
 .container2:hover {
     width: 78vw;
     height: 70vh;
-    background: rgb(243, 161, 161);
-    border: 2px solid rgb(116, 78, 78);
-    border-radius: 20px;
-    background-color: #75272796;
+    background: rgba(255, 255, 255, 0.664);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    background-color: #fdfdfd8e;
     transition: all .5s;
+    box-shadow: inset 28px 28px 40px rgb(134, 131, 131);
 }
 
 .secondAnimation {
@@ -71,18 +71,17 @@
 }
 
 .dogdetail {
-    font-family: cursive;
     font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    margin-left: 4rem;
+    
 }
 
 .img {
-    border-radius: 8px;
+    border-radius: 70px;
     height: 45vh;
     width: 40vw;
     display: flex;
@@ -105,33 +104,34 @@
 }
 
 .name {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .life__span {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .weight {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .height {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
     font-size: 24px;
 }
 
 .temps {
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(32, 32, 32);
-    font-size: 19px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .load {
@@ -161,4 +161,56 @@
     to {
       transform: scaleX(1);
     }
+  }
+
+  /* media queries */
+@media screen and (max-width: 830px) {
+.container2{
+    flex-direction: column;
+}
+.dogdetail{
+    flex-direction: column;
+}
+.img{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.2rem;
+    border-radius: 1.8rem;
+}
+.dogdetail{
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.name{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16.5px;
+}
+.life__span{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16.5px;
+}
+.weight{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16.5px;
+}
+.height{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16.5px;
+}
+.temps{
+    margin-bottom: 0.4rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16.5px;
+}
+
   }
