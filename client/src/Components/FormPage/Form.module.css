@@ -9,6 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-position-y: -35px;
+    background-attachment: fixed;
+  
 }
 
 
