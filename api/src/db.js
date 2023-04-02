@@ -8,6 +8,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME,DB_URL } = process.env;
 //   logging: false, // set to console.log to see the raw SQL queries
 //   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 // }); 
+
 const basename = path.basename(__filename);
  const sequelize = new Sequelize(DB_URL, {
    logging: false, // set to console.log to see the raw SQL queries
@@ -35,7 +36,7 @@ const { Dog, Temperament } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
-Dog.belongsToMany(Temperament, { through: "Dog_Temperament" });
+Dog.belongsToMany(Temperament, { through: "Dog_Temperament" }); //relacion n a m
 Temperament.belongsToMany(Dog, { through: "Dog_Temperament" });
 
 

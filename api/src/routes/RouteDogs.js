@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
             dogName.length // si hay algo en dogName
                 ? res.status(200).json(dogName) //lo consologuea en 200
                 : res.status(400) //si no hay lo manda en 400
-                    .send('Lo siento no tengo perros con ese nombre');
+                    .send('Sorry I dont have dogs with that name');
         } else {
             res.status(200).json(totalDogs); //y si no, los manda todos
         }
