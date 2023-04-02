@@ -3,7 +3,7 @@ const Validation =({name, height, image, life_span, weightMax, weightMin, temper
   let regexImg= /(http(s?):)([/|.|\w|\s|-])*.(?:jpg|gif|png|pnj)/;
   let regexName= /([0-9])+/;
 
-  if(!name.trim()) {
+  if(!name || !name.trim()) {
       errors.name= "Please choose a name"
   } else if (name.length >40 || name.length <2) {
       errors.name= "Please choose a name which is longer than 1 character and shorter than 40 characters"
@@ -34,7 +34,7 @@ const Validation =({name, height, image, life_span, weightMax, weightMin, temper
   } 
 
 
-  if (!image.trim()) {
+  if (!image || !image.trim()) {
       errors.image= "Please insert an image"
   } else if (!regexImg.test(image.trim())) {
       errors.image= "Please insert a valid file"

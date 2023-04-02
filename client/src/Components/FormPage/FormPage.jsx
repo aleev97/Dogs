@@ -28,16 +28,21 @@ const Form = () => {
     const [error, setErrors] = useState({})
 
     const handleInputs = (event) => {
+        const fieldName = event.target.name;
+        const fieldValue = event.target.value;
         setInputs({
-            ...inputs,
-            [event.target.name]: event.target.value
-        })
-        setErrors(Validation({
-            ...inputs,
-            [event.target.name]: event.target.value
-        }))
-    }
-
+          ...inputs,
+          [fieldName]: fieldValue,
+        });
+        const fieldError = Validation({
+          [fieldName]: fieldValue,
+        })[fieldName];
+        setErrors((prevState) => ({
+          ...prevState,
+          [fieldName]: fieldError,
+        }));
+      };
+      
     const handleTemperamentChoices = (event) => {
         setInputs({
             ...inputs,
