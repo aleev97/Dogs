@@ -6,7 +6,7 @@ import Home from './Components/HomePage/HomePage';
 import Detail from './Components/DetailPage/DetailPage';
 import Form from './Components/FormPage/FormPage';
  
-
+//app principal, aque llamo a las rutas para que se rendericen
 function App() {
   return (
     <div> 

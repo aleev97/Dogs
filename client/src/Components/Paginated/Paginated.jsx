@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Styles from './Paginated.module.css';
 
+
+//"dogsPerPage" indica el número de elementos que se mostrarán por página,
+//"allDogs" número total de elementos a paginar y
+//"paginated" función que se ejecutará cada vez que se cambie de página.
 export const Paginated = ({ dogsPerPage, allDogs, paginated }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const pagesPerSection = 8;
+  const pagesPerSection = 8; //indica cuántas páginas se mostrarán en cada sección
 
   const pageNumber = [];
-  for (let i = 0; i <= Math.ceil(allDogs / dogsPerPage - 1); i++) {
+  for (let i = 0; i <= Math.ceil(allDogs / dogsPerPage - 1); i++) { //cantidad total de paginas cada 8 perros
     pageNumber.push(i + 1);
   }
 
@@ -15,6 +19,7 @@ export const Paginated = ({ dogsPerPage, allDogs, paginated }) => {
     pageSections.push(pageNumber.slice(i, i + pagesPerSection));
   }
 
+  //funciones utilizadas para cambiar de página o sección
   const goToPage = (page) => {
     setCurrentPage(page);
     paginated(page);
@@ -49,9 +54,8 @@ export const Paginated = ({ dogsPerPage, allDogs, paginated }) => {
           currentSection.map((number) => (
             <li className={Styles.number} key={number}>
               <button
-                className={`${Styles.buttonNumber} ${
-                  currentPage === number && Styles.active
-                }`}
+                className={`${Styles.buttonNumber} ${currentPage === number && Styles.active
+                  }`}
                 onClick={() => goToPage(number)}
               >
                 {number}

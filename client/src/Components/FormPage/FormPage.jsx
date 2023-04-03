@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getTemperamentsList} from "../../Redux/actions"
+import { getTemperamentsList } from "../../Redux/actions"
 import styles from "./Form.module.css"
 import Validation from "./Validation"
 import axios from "axios";
 
-
 const Form = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const temperaments = useSelector((state) => state.temperaments) //global state
-    const [inputs, setInputs] = useState({ //local state
+    const temperaments = useSelector((state) => state.temperaments) //estado global
+    const [inputs, setInputs] = useState({ //estado local, se almacena la información del formulario, incluyendo un array vacío para los temperamentos que el usuario puede elegir en el formulario
         name: "",
         height: "",
         life_span: "",
@@ -25,24 +24,26 @@ const Form = () => {
         navigate("/home");
     }
 
-    const [error, setErrors] = useState({})
+    const [error, setErrors] = useState({}) // control de errores de validación en cada campo del formulario.
 
+
+    //manejo los cambios en los inputs y actualizo el estado local del componente en consecuencia.
     const handleInputs = (event) => {
         const fieldName = event.target.name;
         const fieldValue = event.target.value;
         setInputs({
-          ...inputs,
-          [fieldName]: fieldValue,
+            ...inputs,
+            [fieldName]: fieldValue,
         });
         const fieldError = Validation({
-          [fieldName]: fieldValue,
+            [fieldName]: fieldValue,
         })[fieldName];
         setErrors((prevState) => ({
-          ...prevState,
-          [fieldName]: fieldError,
+            ...prevState,
+            [fieldName]: fieldError,
         }));
-      };
-      
+    };
+
     const handleTemperamentChoices = (event) => {
         setInputs({
             ...inputs,
@@ -50,16 +51,17 @@ const Form = () => {
         })
     }
 
+    //envío la información del formulario
     const handleSubmit = async (event) => {
         event.preventDefault();
-          await axios.post('/dogs', {
+        await axios.post('/dogs', {
             name: inputs.name,
             temperament: inputs.temperaments,
             image: inputs.image,
             weight: inputs.weightMin + ' - ' + inputs.weightMax,
             height: inputs.height,
             life_span: inputs.life_span,
-          });
+        });
         alert("Dog successfully added")
         setInputs({
             name: "",
@@ -79,11 +81,11 @@ const Form = () => {
     return (
         <div className={styles.container1} >
             <div className={styles.contentTitle} >
-            <button className={styles.button1} onClick={backToHome} > Back to Home</button>
+                <button className={styles.button1} onClick={backToHome} > Back to Home</button>
                 <h1 className={styles.title} >Complete the Dog's Form 🐶 </h1>
             </div>
-            <form  onSubmit={handleSubmit} className={styles.form} >
-               
+            <form onSubmit={handleSubmit} className={styles.form} >
+
                 <div className={styles.container2} >
                     <label className={styles.name} >Name: </label>
                     <input
@@ -141,14 +143,14 @@ const Form = () => {
 
                 <div className={styles.container5} >
                     <label className={styles.height} >Height:</label>
-                        <input
-                            className={styles.inputHeight}
-                            type="text"
-                            name="height"
-                            value={inputs.height}
-                            placeholder={"For example: 55 - 67 (cm)"}
-                            onChange={(event) => handleInputs(event)} />
-                        {error.height && <strong className={styles.errheight} >{error.height}</strong>}
+                    <input
+                        className={styles.inputHeight}
+                        type="text"
+                        name="height"
+                        value={inputs.height}
+                        placeholder={"For example: 55 - 67 (cm)"}
+                        onChange={(event) => handleInputs(event)} />
+                    {error.height && <strong className={styles.errheight} >{error.height}</strong>}
 
                 </div>
 
@@ -156,20 +158,20 @@ const Form = () => {
 
                 <div className={styles.container6} >
                     <label className={styles.life} >Life expectancy:</label>
-                        <input
-                            className={styles.inputLife}
-                            type="text"
-                            name="life_span"
-                            value={inputs.life_span}
-                            placeholder={"For example: 10 - 15"}
-                            onChange={(event) => handleInputs(event)} />
-                        {error.life_span && <strong className={styles.errLife} >{error.life_span}</strong>}
+                    <input
+                        className={styles.inputLife}
+                        type="text"
+                        name="life_span"
+                        value={inputs.life_span}
+                        placeholder={"For example: 10 - 15"}
+                        onChange={(event) => handleInputs(event)} />
+                    {error.life_span && <strong className={styles.errLife} >{error.life_span}</strong>}
                 </div>
 
                 <br />
 
                 <label className={styles.temperaments} >Temperaments: </label>
-                <select   className={styles.temps} onChange={(event) => handleTemperamentChoices(event)}>
+                <select className={styles.temps} onChange={(event) => handleTemperamentChoices(event)}>
                     <option value="all"></option>
                     {temperaments.map((temp, index) => {
                         return (

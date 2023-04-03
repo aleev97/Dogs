@@ -8,6 +8,7 @@ import { Paginated } from "../Paginated/Paginated";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+    
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const allDogs = useSelector((state) => state.dogs); //traigo lo que esta en estado de dogs(reducer)
@@ -18,7 +19,7 @@ export default function Home() {
         }
     );
 
-    //states
+    //estados
     const [currentPage, setCurrentPage] = useState(1); // guardo la pagina actual, empiezo en 1
     const [sort, setSort] = useState("");
     const [dogsPerPage, setDogsPerPage] = useState(8);  //seteo 8 personajes por pagina
@@ -32,13 +33,11 @@ export default function Home() {
         setCurrentPage(pageNumber)
     }
 
-
     //me traigo del estado los perros, cuando el componente se monta
     useEffect(() => {
         dispatch(getDogs()) //despacho los dogs que traigo de la api
         dispatch(getTemperamentsList()) //despacho los temperaments que traigo de la api
     }, [dispatch])
-
 
     function form() {
         navigate("/form");
@@ -143,14 +142,13 @@ export default function Home() {
                         />
                     );
 
-                })} 
+                })}
                 <div className={Styles.paginated} >
-                <div>
-                    <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
+                    <div>
+                        <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginated={paginated} />
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }      

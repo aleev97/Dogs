@@ -57,8 +57,7 @@ const  UUID_REGX =
 
 let dogDb;
 
-if(UUID_REGX.test(id)){
-  //Obtenemos el perro de la DB mediante el ID
+if(UUID_REGX.test(id)){ //Obtenemos el perro de la DB mediante el ID si existe coincidencia con UUID
   dogDb = await Dog.findOne({
     where: { id : id },
     include: {

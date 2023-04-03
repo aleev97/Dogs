@@ -26,7 +26,7 @@ export function getDogsByName(name) {
     return async function (dispatch) {
         const { data } = await axios.get(`/dogs?name=${name}`);
         return dispatch({
-            type: GET_DOGS_BY_NAME,
+            type: GET_DOGS_BY_NAME, //busqueda por nombre para boton search
             payload: data
         });
     };
@@ -51,12 +51,12 @@ export function getDetail(id) {
 
 export function orderByName(payload) {
     return {
-        type: ORDER_BY_NAME,
+        type: ORDER_BY_NAME, //accion para filtrado de orden ascendente y descendente
         payload
     }
 }
 
-export function orderByWeight(payload) {
+export function orderByWeight(payload) {  //accion para filtrado por peso
     return {
         type: ORDER_BY_WEIGHT,
         payload
@@ -65,14 +65,14 @@ export function orderByWeight(payload) {
 
 export function filterCreated(payload) { //payload es el valor de la accion que yo elijo
     return {
-        type: FILTER_CREATED,
+        type: FILTER_CREATED, //accion para filtrar personajes de la api o creados desde la DB
         payload
     }
 }
 
 export function filterDogsByTemperament(payload) {
     return {
-        type: GET_DOGS_BY_TEMP,
+        type: GET_DOGS_BY_TEMP, //filtrado por temperamentos
         payload
     }
 

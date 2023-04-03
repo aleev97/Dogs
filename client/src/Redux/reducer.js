@@ -6,17 +6,17 @@ const initialState = {
     alldogs: [],
     detail: [],
 }
-// IMPORTANTE----->   preguntar sobre los tipos de medidas
+
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-        case GET_DOGS:
+        case GET_DOGS: //reducer para traer info de dogs
             return {
                 ...state,
                 dogs: action.payload, //mando todo lo que este en el arreglo dogs
                 alldogs: action.payload,
             };
 
-        case GET_TEMPERAMENTS_LIST:
+        case GET_TEMPERAMENTS_LIST: //reducer para temperamentos
             return {
                 ...state,
                 temperaments: action.payload,
@@ -27,10 +27,10 @@ export default function reducer(state = initialState, action) {
                 dogs: action.payload,
             };
 
-        case ORDER_BY_NAME:
+        case ORDER_BY_NAME:  //reducer para el filtro de orden asc/desc
             let sortedArr =
                 action.payload === "asc"
-                    ? state.dogs.sort(function (a, b) {
+                    ? state.dogs.sort(function (a, b) { // ordena los elementos de un arreglo (array) localmente y devuelve el arreglo ordenado
                         if (a.name > b.name) {
                             return 1;
                         }
@@ -53,7 +53,7 @@ export default function reducer(state = initialState, action) {
                 dogs: sortedArr,
             };
 
-        case ORDER_BY_WEIGHT:
+        case ORDER_BY_WEIGHT: //reducer de filtrado por peso min/max
             let sortByWeight =
                 action.payload === "max"
                     ? state.dogs.sort(function (a, b) {
@@ -79,7 +79,7 @@ export default function reducer(state = initialState, action) {
                 dogs: sortByWeight,
             };
 
-        case GET_DOGS_BY_TEMP:
+        case GET_DOGS_BY_TEMP: //reducer de filtrado por temperamentos
             let dogsWithChosenTemps = action.payload === "all" ? state.alldogs :
                 state.alldogs?.filter(dog => {
                     console.log(dog)
@@ -91,7 +91,7 @@ export default function reducer(state = initialState, action) {
                 dogs: dogsWithChosenTemps,
             }
 
-        case FILTER_CREATED:
+        case FILTER_CREATED: //reducer para filtrado por perros de api/DB
             const createdFilter = action.payload === 'created' ? state.alldogs.filter(dog => dog.createInDb) : state.alldogs.filter(dog => !dog.createInDb)
             return {
                 ...state,

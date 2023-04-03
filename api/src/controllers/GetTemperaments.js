@@ -7,7 +7,7 @@ const getAllTemperaments = async () =>{
     try {
     let everyTemperament = allData.data
     .map((dog) => (dog.temperament ? dog.temperament : "Has no temperament"))
-    .map((dog) => dog?.split(", "));
+    .map((dog) => dog?.split(", ")); //se dividen en un array utilizando el método "split"
     let eachTemperament = [...new Set(everyTemperament.flat())];
     eachTemperament.forEach((temp) => {
     if (temp) {
@@ -17,7 +17,7 @@ const getAllTemperaments = async () =>{
     }
     });
     eachTemperament = await Temperament.findAll();
-    return eachTemperament;
+    return eachTemperament;  //la función devuelve todos los temperamentos almacenados en la base de datos
 } catch (error) {
     throw new Error(error = error.message);
 }
