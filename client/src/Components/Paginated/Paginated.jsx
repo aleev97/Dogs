@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Styles from './Paginated.module.css';
 
-
 //"dogsPerPage" indica el número de elementos que se mostrarán por página,
 //"allDogs" número total de elementos a paginar y
 //"paginated" función que se ejecutará cada vez que se cambie de página.
@@ -23,14 +22,17 @@ export const Paginated = ({ dogsPerPage, allDogs, paginated }) => {
   const goToPage = (page) => {
     setCurrentPage(page);
     paginated(page);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const goToPrevSection = () => {
     setCurrentPage((prevPage) => prevPage - pagesPerSection);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const goToNextSection = () => {
     setCurrentPage((prevPage) => prevPage + pagesPerSection);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const currentSection = pageSections.find((section) =>

@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     image:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       defaultValue: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDsGDjz4vwLipm7ZfD_h-hFLOrPAO85fg6FQ&usqp=CAU",
     },
