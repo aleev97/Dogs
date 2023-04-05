@@ -32,6 +32,7 @@
   
   .button {
     margin-top: 9rem;
+    cursor: pointer;
     border-radius: 6px;
     background-color: rgb(67, 99, 187);
     align-items: center;
@@ -44,6 +45,7 @@
   }
   
   button:hover {
+    cursor: pointer;
     background: linear-gradient(90deg, #3E5C76 0%, #3E5C76 100%);
   }
   

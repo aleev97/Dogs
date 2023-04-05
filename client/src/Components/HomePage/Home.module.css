@@ -90,6 +90,7 @@
 }
 
 .order {
+  cursor: pointer;
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
   align-items: center;
@@ -103,6 +104,7 @@
 }
 
 .weight {
+  cursor: pointer;
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
   align-items: center;
@@ -116,6 +118,7 @@
 }
 
 .Ordertemperaments {
+  cursor: pointer;
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
   align-items: center;
@@ -129,6 +132,7 @@
 }
 
 .orderInfo {
+  cursor: pointer;
   border-radius: 4px;
   background-color: rgb(233, 166, 79);
   align-items: center;
